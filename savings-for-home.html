@@ -190,7 +190,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Savings For A Home </h1>
+                        <h1 id="title0"></h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
@@ -328,7 +328,8 @@
     <script>
         $( document ).ready(function() {
 
-            $.getJSON("json/savings.json", function(json) {
+            $.getJSON("json/savings-for-home.json", function(json) {
+                $("#title0").append(json.title);
                 $("#title1").append(json.title);
                 $("#title2").append(json.title);
                 $("#bodyText").append(json.body);
