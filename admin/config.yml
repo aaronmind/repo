@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aaronmind/aaronmind.github.io
+  repo: aaronmind.github.io
   branch: master
   site_domain: mindmymoney.netlify.app
   display_url: https://aaronmind.github.io/repo/
