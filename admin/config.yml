@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aaronmind.github.io
+  repo: aaronmind/repo
   branch: master
   site_domain: mindmymoney.netlify.app
   display_url: https://aaronmind.github.io/repo/
@@ -18,7 +18,7 @@ collections:
     files:
       - label: "Savings"
         name: "savings"
-        file: "/json/contact.json"
+        file: "/json/savings.json"
         allow_add: true
         fields:
           - { label: Title, name: title, widget: string}
