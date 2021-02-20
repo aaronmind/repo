@@ -11,8 +11,6 @@ collections:
   - name: "services"
     label: "Services"
     extension: "json"
-    editor:
-      preview: true
     delete: false
     preview_path: 'page'
     files:
