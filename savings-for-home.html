@@ -214,7 +214,7 @@
                            
                             <div class="text">
                                 <h2 id="title2"></h2>
-                               <p id="bodyText"></p>
+                               <pre><p id="bodyText"></p></pre>
                                     <div id="parent">
                                         <img id="imagevideo1" width='100%' height="315" src="assets/images/gdpr/video7.png">
                                         <div class="btn-box3">
@@ -332,10 +332,8 @@
                 $("#title0").append(json.title);
                 $("#title1").append(json.title);
                 $("#title2").append(json.title);
-                var textoB = json.body;
-                console.log(textoB);
-                console.log(textoB.replace('\n', '<br>'));
-                $("#bodyText").append(textoB.replace('\n', '<br>'));
+                
+                $("#bodyText").append(json.body);
                 
             });
 
