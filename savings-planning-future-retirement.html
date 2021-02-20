@@ -213,7 +213,7 @@
                            
                             <div class="text">
                                 <h2>Savings</h2>
-                                <p>Everyone wants to make sure they have a bright future, and saving regularly is a great way to help make sure that your future needs are taken care of. Whether you are saving for education fees, planning for retirement, or for future financial security, regular investing could be the answer.</p>
+                                <p id="bodyText"></p>
 <h4>Estimated cost of a child going to college</h4>
 <div id="parent2">
     <img id="imagevideo2" width='100%' height="315" src="assets/images/gdpr/calc2.png">
@@ -313,7 +313,10 @@
     <script src="assets/js/script.js"></script>
     <script>
         $( document ).ready(function() {
-            
+            $.getJSON("json/savings.json", function(json) {
+                
+                $("#bodyText").append(json.body);
+            });
 
 
             $("#zurich1").hide();
