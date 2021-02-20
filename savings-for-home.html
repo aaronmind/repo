@@ -332,7 +332,8 @@
                 $("#title0").append(json.title);
                 $("#title1").append(json.title);
                 $("#title2").append(json.title);
-                $("#bodyText").append(json.body);
+              
+                document.getElementById('bodyText').innerHTML =json.body;
             });
 
             $("#youtube1").hide();
