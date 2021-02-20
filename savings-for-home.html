@@ -194,7 +194,7 @@
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Services</li><li>Savings For A Home </li>
+                        <li>Services</li><li id="title1"></li>
                     </ul>
                 </div>
             </div>
@@ -213,17 +213,8 @@
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>Savings For A Home </h2>
-                                <p>Most of us want to own our home. It fills us with a sense of pride and achievement. But, our home also means much more to us than that. We consider our home a safe haven. A place where we can spend time with our family and friends. However, with 10% of the value of your first house required upfront, buying your new home requires planning. Traditional deposits pose a problem as our money just can’t grow fast enough to even keep up with house inflation, especially at today’s low Interest rates.</p>
-                                <p>Three questions you need to consider:</p>
-
-                                <div class="two-column">
-                                    <ul class="list-item clearfix">
-                                        <li>Goals: how much do I need to save to afford a deposit on my desired home?.</li>
-                                        <li>Timeframe: how much time do I have to let my savings grow?.</li>
-                                        <li>Choice: what financial vehicles can I invest in to meet my objectives?</li>
-                                       
-                                    </ul></div>
+                                <h2 id="title2"></h2>
+                               <p id="bodyText"></p>
                                     <div id="parent">
                                         <img id="imagevideo1" width='100%' height="315" src="assets/images/gdpr/video7.png">
                                         <div class="btn-box3">
@@ -336,6 +327,13 @@
     <script src="assets/js/script.js"></script>
     <script>
         $( document ).ready(function() {
+
+            $.getJSON("json/savings.json", function(json) {
+                $("#title1").append(json.title);
+                $("#title2").append(json.title);
+                $("#bodyText").append(json.body);
+            });
+
             $("#youtube1").hide();
             $("#parent").hide();
             if(sessionStorage.getItem("acceptedCookiesYoutube") == "yes")

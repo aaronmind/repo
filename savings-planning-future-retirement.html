@@ -193,7 +193,7 @@
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Services</li><li>Savings</li>
+                        <li>Services</li><li id="title1"></li>
                     </ul>
                 </div>
             </div>
@@ -212,7 +212,7 @@
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>Savings</h2>
+                                <h2 id="title2"></h2>
                                 <p id="bodyText"></p>
 <h4>Estimated cost of a child going to college</h4>
 <div id="parent2">
@@ -314,7 +314,8 @@
     <script>
         $( document ).ready(function() {
             $.getJSON("json/savings.json", function(json) {
-                
+                $("#title1").append(json.title);
+                $("#title2").append(json.title);
                 $("#bodyText").append(json.body);
             });
 
