@@ -5,7 +5,7 @@ backend:
   site_domain: mindmymoney.netlify.app
   display_url: https://aaronmind.github.io/repo/
 
-media_folder: "/assets/img/uploads"
+media_folder: "/assets/imgages/uploads"
 
 collections:
   - name: "services"
