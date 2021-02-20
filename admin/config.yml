@@ -24,7 +24,7 @@ collections:
           - { label: Title, name: title, widget: string}
           - { label: Body, name: body, widget: markdown}
       - label: "Savings For A Home"
-        name: "savings"
+        name: "savings-for-home"
         file: "/json/savings-for-home.json"
         allow_add: true
         fields:
