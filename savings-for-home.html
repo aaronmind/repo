@@ -333,7 +333,7 @@
                 $("#title1").append(json.title);
                 $("#title2").append(json.title);
                 
-                $("#bodyText").html(json.body);
+                $("#bodyText").append(json.body.replace(/\n/g, "<br />"));
                 
             });
 
