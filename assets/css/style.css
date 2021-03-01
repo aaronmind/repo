@@ -94,6 +94,7 @@ body {
         height:80% !important;
        
       }
+      
   }
 .large-container{
   max-width: 1500px;
@@ -1867,7 +1868,7 @@ div#mCSB_1_container{
 
 .about-section{
   position: relative;
-  padding: 120px 0px 100px 0px;
+  padding: 120px 0px 0px 0px;
 }
 
 .image_block_1 .image-box{

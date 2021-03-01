@@ -9,9 +9,11 @@
 
 }
 
-@media only screen and (max-width: 1249px){
+@media only screen and (max-width: 1849px){
 
-  
+    .sec-pad{
+        padding: 0px 0px 120px 0px;
+      }
 
 }
 
