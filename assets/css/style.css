@@ -327,6 +327,7 @@ img {
   bottom: 20px;
 }
 
+
 .scroll-top span{
   color: #fff;
 }
@@ -1190,7 +1191,7 @@ img {
 }
 
 .main-header .sticky-header .logo-box{
-  padding: 25px 85px 22px 0px;
+  padding: 15px 85px 12px 0px;
 }
 
 .main-header .sticky-header .main-menu .navigation > li{
