@@ -335,7 +335,7 @@
                 $("#title2").append(json.title);
                 
                 $("#bodyText").append(json.body.replace(/\n/g, "<br />"));
-                var converter = new Showdown.converter();
+                var converter = new showdown.Converter();
                 var html = converter.makeHtml(json.body);
                 alert(html);
                 
