@@ -339,7 +339,7 @@
                 var html = converter.makeHtml(json.body);
                 html = html.replaceAll("<ul>","<ul style='list-style:circle !important'>");
                 html = html.replaceAll("<li>","<li style='list-style:circle !important'>");
-                $("#bodyText").append();
+                $("#bodyText").append(html);
                 
             });
 
