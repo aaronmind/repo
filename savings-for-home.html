@@ -337,7 +337,7 @@
                 
                 var converter = new showdown.Converter();
                 var html = converter.makeHtml(json.body);
-
+console.log(html.replaceAll("<ul>","<ul style='list-style:circle'>"));
                 $("#bodyText").append(html.replaceAll("<ul>","<ul style='list-style:circle'>"));
                 
             });
