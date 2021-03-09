@@ -148,7 +148,7 @@ input,button,select,textarea{
 }
 
 ul,li{
-  list-style:none;
+  list-style:none !important;
   padding:0px;
   margin:0px; 
 }

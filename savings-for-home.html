@@ -337,8 +337,9 @@
                 
                 var converter = new showdown.Converter();
                 var html = converter.makeHtml(json.body);
-
-                $("#bodyText").append(html.replaceAll("<ul>","<ul style='list-style:circle !important'>"));
+                html = html.replaceAll("<ul>","<ul style='list-style:circle !important'>");
+                html = html.replaceAll("<li>","<li style='list-style:circle !important'>");
+                $("#bodyText").append();
                 
             });
 
