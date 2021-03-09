@@ -325,6 +325,7 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/showdown.min.js"></script>
     <script>
         $( document ).ready(function() {
 
@@ -334,6 +335,9 @@
                 $("#title2").append(json.title);
                 
                 $("#bodyText").append(json.body.replace(/\n/g, "<br />"));
+                var converter = new Showdown.converter();
+                var html = converter.makeHtml(json.body);
+                alert(html);
                 
             });
 
