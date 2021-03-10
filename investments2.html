@@ -365,8 +365,8 @@
                 $("#title2").append(json.title);
                 var converter = new showdown.Converter();
                 var html = converter.makeHtml(json.body);
-                html = html.replaceAll("<ul>","<ul class='list-item clearfix'>");
-                //html = html.replaceAll("<li>","<li style='list-style:circle !important; margin-left:10px;'>");
+                html = html.replaceAll("<ul>","<div class='two-column'><ul class='list-item clearfix'>");
+                html = html.replaceAll("</ul>","</ul></div>");
                 $("#bodyText").append(html);
                 if(json.link1 != '' && json.lLink1 != '' && json.link1 != undefined && json.lLink1 != undefined) 
                 {
