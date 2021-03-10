@@ -330,6 +330,8 @@
     <script src="assets/js/script.js"></script>
     <script>
         $( document ).ready(function() {
+            $("#link1").hide();
+            $("#lLink1").hide();
             $.getJSON("json/savings.json", function(json) {
                 $("#title0").append(json.title);
                 $("#title1").append(json.title);
@@ -339,8 +341,14 @@
                 html = html.replaceAll("<ul>","<ul style='list-style:circle !important; margin-left:10px;'>");
                 html = html.replaceAll("<li>","<li style='list-style:circle !important; margin-left:10px;'>");
                 $("#bodyText").append(html);
-                $("#link1").attr('href',json.link1); 
-                $("#lLink1").append(json.lLink1);  
+                if(json.link1 != '' && json.lLink1 != '')
+                {
+                    $("#link1").attr('href',json.link1); 
+                    $("#lLink1").append(json.lLink1);  
+                    $("#link1").show();
+                    $("#lLink1").show();
+                }
+                
                 $("#link2").attr('href',json.link2); 
                 $("#lLink2").append(json.lLink2);  
                 $("#link3").attr('href',json.link3); 

@@ -34,12 +34,12 @@ collections:
         fields:
           - { label: Title, name: title, widget: string}
           - { label: Body, name: body, widget: markdown}
-          - { label: Label Link 1, name: lLink1, widget: string}
-          - { label: URL Link 1, name: link1, widget: string}
-          - { label: Label Link 2, name: lLink2, widget: string}
-          - { label: URL Link 2, name: link2, widget: string}
-          - { label: Label Link 3, name: lLink3, widget: string}
-          - { label: URL Link 3, name: link3, widget: string}
+          - { label: Label Link 1, name: lLink1, widget: string, required: false}
+          - { label: URL Link 1, name: link1, widget: string, required: false}
+          - { label: Label Link 2, name: lLink2, widget: string, required: false}
+          - { label: URL Link 2, name: link2, widget: string, required: false}
+          - { label: Label Link 3, name: lLink3, widget: string, required: false}
+          - { label: URL Link 3, name: link3, widget: string, required: false}
       - label: "Investments"
         name: "investments"
         file: "/json/investments.json"
@@ -47,10 +47,10 @@ collections:
         fields:
           - { label: Title, name: title, widget: string}
           - { label: Body, name: body, widget: markdown}
-          - { label: Label Link 1, name: lLink1, widget: string}
-          - { label: URL Link 1, name: link1, widget: string}
-          - { label: Label Link 2, name: lLink2, widget: string}
-          - { label: URL Link 2, name: link2, widget: string}
-          - { label: Label Link 3, name: lLink3, widget: string}
-          - { label: URL Link 3, name: link3, widget: string}
+          - { label: Label Link 1, name: lLink1, widget: string, required: false}
+          - { label: URL Link 1, name: link1, widget: string, required: false}
+          - { label: Label Link 2, name: lLink2, widget: string, required: false}
+          - { label: URL Link 2, name: link2, widget: string, required: false}
+          - { label: Label Link 3, name: lLink3, widget: string, required: false}
+          - { label: URL Link 3, name: link3, widget: string, required: false}
 	  
