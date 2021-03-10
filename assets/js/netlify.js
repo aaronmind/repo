@@ -5,7 +5,8 @@ $( document ).ready(function() {
     $("#li3").hide();
     $("#li4").hide();
     $("#li5").hide();
-    var jsonFile = document.currentScript.getAttribute('jsonFile');
+    var script_tag = document.getElementById('netlify')
+    var jsonFile = script_tag.getAttribute('jsonFile');
     $.getJSON("json/"+jsonFile, function(json) {
         $("#title0").append(json.title);
         $("#title1").append(json.title);
