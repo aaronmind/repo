@@ -5,8 +5,8 @@ $( document ).ready(function() {
     $("#li3").hide();
     $("#li4").hide();
     $("#li5").hide();
-
-    $.getJSON("json/mortgage-protection.json", function(json) {
+    var jsonFile = document.currentScript.getAttribute('jsonFile');
+    $.getJSON("json/"+jsonFile, function(json) {
         $("#title0").append(json.title);
         $("#title1").append(json.title);
         $("#title2").append(json.title);
