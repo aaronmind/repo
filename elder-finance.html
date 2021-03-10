@@ -25,6 +25,7 @@
 <link href="assets/css/style.min.css" rel="stylesheet">
 <link href="assets/css/responsive.min.css" rel="stylesheet">
 
+
 </head>
 
 
@@ -194,7 +195,7 @@
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Services</li><li>Elder Finance</li>
+                        <li>Services</li><li id="title1"></li>
                     </ul>
                 </div>
             </div>
@@ -211,16 +212,8 @@
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>Elder Finance</h2>
-                                <p>One of the biggest concerns of the elderly is health and the increased level of care required as they get older. Make sure you, your parents and loved ones are properly prepared for the financial demands as they get older.</p>
-                                <div class="two-column">
-                                    <ul class="list-item clearfix">
-                                        <li>Census 2016 highlighted a 19.1% increase in the population over 65 to 637,567. This is expected to continue to rise.</li>
-                                        <li>Cost of a nursing home ranges from €50,000 to 90,000 per person per annum. This could be one of the biggest expenses of your life.</li>
-                                        <li>Can be extremely complicated to decide the best course and expensive if wrong</li>
-                                        <li>Needs to be considered in conjunction with inheritance planning</li>
-                                        <li>Ideally at least 5 years prior to needing care</li>
-                                    </ul></div>
+                                <h2 id="title2"></h2>
+                                <p id="bodyText"></p>
                                    
                             </div>
                           
@@ -232,9 +225,11 @@
                         <div class="service-sidebar">
                             <div class="category-widget">
                                 <ul class="category-list clearfix">
-                                    <li><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
-                                    <li><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
-                                    <li><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                    <li id="li1"><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
+                                    <li id="li2"><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
+                                    <li id="li3"><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                    <li id="li4"><a id="link4" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink4"></a></li>
+                                    <li id="li5"><a id="link5" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink5"></a></li>
 
                                 </ul>
                             </div>
@@ -328,6 +323,6 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/netlify.js" id="netlify" jsonFile="elder-finance.json"></script>
 </body><!-- End of .page_wrapper -->
 </html>

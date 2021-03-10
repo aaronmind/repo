@@ -194,7 +194,7 @@
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Services</li><li>Inheritance</li>
+                        <li>Services</li><li id="title1"></li>
                     </ul>
                 </div>
             </div>
@@ -211,14 +211,8 @@
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>Inheritance</h2>
-                                <p>Revenue receive over €500 million a year in Capital Acquisition Tax (CAT), with the majority from inheritance tax. Currently the lifetime threshold a person can receive from their parents is just €335,000. This means that this is no longer a tax for the rich but now for the affluent many. Early financial advice can help alleviate some of this potential tax burden.</p>
-                                <div class="two-column">
-                                    <ul class="list-item clearfix">
-                                        <li>Gift Tax Exemption.</li>
-                                        <li>Special life insurance to cover inheritance tax liability.</li>
-                                       
-                                    </ul></div>
+                                <h2 id="title2"></h2>
+                                <p id="bodyText"></p>
                                     <div id="parent">
                                         <img id="imagevideo1" width='100%' height="315" src="assets/images/gdpr/video3.png">
                                         <div class="btn-box3">
@@ -239,9 +233,11 @@
                         <div class="service-sidebar">
                             <div class="category-widget">
                                 <ul class="category-list clearfix">
-                                    <li><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
-                                    <li><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
-                                    <li><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                    <li id="li1"><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
+                                    <li id="li2"><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
+                                    <li id="li3"><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                    <li id="li4"><a id="link4" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink4"></a></li>
+                                    <li id="li5"><a id="link5" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink5"></a></li>
 
                                 </ul>
                             </div>
@@ -335,6 +331,7 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/netlify.js" id="netlify" jsonFile="inheritance.json"></script>
     <script>
         $( document ).ready(function() {
             $("#youtube1").hide();
