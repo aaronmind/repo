@@ -232,11 +232,11 @@
                         <div class="service-sidebar">
                             <div class="category-widget">
                                 <ul class="category-list clearfix">
-                                    <li><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
-                                    <li><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
-                                    <li><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
-                                    <li><a id="link4" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink4"></a></li>
-                                    <li><a id="link5" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink5"></a></li>
+                                    <li id="li1"><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
+                                    <li id="li2"><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
+                                    <li id="li3"><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                    <li id="li4"><a id="link4" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink4"></a></li>
+                                    <li id="li5"><a id="link5" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink5"></a></li>
 
 
                                 </ul>
@@ -333,16 +333,11 @@
     <script src="assets/js/script.js"></script>
     <script>
         $( document ).ready(function() {
-            $("#link1").hide();
-            $("#lLink1").hide();
-            $("#link2").hide();
-            $("#lLink2").hide();
-            $("#link3").hide();
-            $("#lLink3").hide();
-            $("#link4").hide();
-            $("#lLink4").hide();
-            $("#link5").hide();
-            $("#lLink5").hide();
+            $("#li1").hide();
+            $("#li2").hide();
+            $("#li3").hide();
+            $("#li4").hide();
+            $("#li5").hide();
 
             $.getJSON("json/savings.json", function(json) {
                 $("#title0").append(json.title);
@@ -357,37 +352,37 @@
                 {
                     $("#link1").attr('href',json.link1); 
                     $("#lLink1").append(json.lLink1);  
-                    $("#link1").show();
-                    $("#lLink1").show();
+                    $("#l11").show();
+                    
                 }
                 if(json.link2 != '' && json.lLink2 != '')
                 {
                     $("#link2").attr('href',json.link2); 
                     $("#lLink2").append(json.lLink2);  
-                    $("#link2").show();
-                    $("#lLink2").show();
+                    $("#li2").show();
+                   
                 }
                 if(json.link3 != '' && json.lLink3 != '')
                 {
                     $("#link3").attr('href',json.link3); 
                     $("#lLink3").append(json.lLink3);  
-                    $("#link3").show();
-                    $("#lLink3").show();
+                    $("#li3").show();
+                   
                 }
                 
                 if(json.link4 != '' && json.lLink4 != '')
                 {
                     $("#link4").attr('href',json.link4); 
                     $("#lLink4").append(json.lLink4);  
-                    $("#link4").show();
-                    $("#lLink4").show();
+                    $("#li4").show();
+                    
                 }
                 if(json.link5 != '' && json.lLink5 != '')
                 {
                     $("#link5").attr('href',json.link5); 
                     $("#lLink5").append(json.lLink5);  
-                    $("#link5").show();
-                    $("#lLink5").show();
+                    $("#li5").show();
+                    
                 }
             });
 
