@@ -206,16 +206,13 @@
         <section class="service-details">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-2 sidebar-side">
-                        
-                    </div>
+                   
                     <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>Investments</h2>
-                                <p>Some things in life can make you feel uncomfortable. However investing your hard-earned money shouldn’t be one of    them. That’s why we want to help you get comfortable investing - starting with 3 easy steps.</p>
-                               
+                                <h2 id="title2"></h2>
+                                <p id="bodyText"></p>                               
 
                                 <div class="two-column">
                                     <ul class="list-item clearfix">
@@ -249,6 +246,26 @@
                             </div>
                           
                  
+                        </div>
+                    </div>
+               
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="service-sidebar">
+                            <div class="category-widget">
+                                <ul class="category-list clearfix">
+                                    <li><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
+                                    <li><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
+                                    <li><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+
+                                </ul>
+                            </div>
+                            <div class="support-box">
+                                <div class="content-box">
+                                    <div class="icon-box"><i class="flaticon-phone"></i></div>
+                                    <p>Get Professional Help</p>
+                                    <h3><a href="tel:+353 14933880">+353 14933880</a></h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                
@@ -329,11 +346,28 @@
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/scrollbar.js"></script>
     <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/showdown.min.js"></script>
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
     <script>
         $( document ).ready(function() {
+            $.getJSON("json/savings.json", function(json) {
+                $("#title0").append(json.title);
+                $("#title1").append(json.title);
+                $("#title2").append(json.title);
+                var converter = new showdown.Converter();
+                var html = converter.makeHtml(json.body);
+                html = html.replaceAll("<ul>","<ul style='list-style:circle !important; margin-left:10px;'>");
+                html = html.replaceAll("<li>","<li style='list-style:circle !important; margin-left:10px;'>");
+                $("#bodyText").append(html);
+                $("#link1").attr('href',json.link1); 
+                $("#lLink1").append(json.lLink1);  
+                $("#link2").attr('href',json.link2); 
+                $("#lLink2").append(json.lLink2);  
+                $("#link3").attr('href',json.link3); 
+                $("#lLink3").append(json.lLink3);    
+            });
             $("#youtube1").hide();
             $("#parent").hide();
             if(sessionStorage.getItem("acceptedCookiesYoutube") == "yes")
