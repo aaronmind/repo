@@ -211,27 +211,9 @@
                         <div class="service-details-content">
                            
                             <div class="text">
-                                <h2>One Plan</h2>
-                                <p>One Plan is an unique product from Irish Life that we are delighted to be in a position to provide to our clients. It is only available through a limited number of advisors.</p>
-                                <h4>What is One Plan?</h4>
-                                <p>Tailored cover, in a bundle to suit your budget.</p>
-                                <p>It combines life cover, bill cover and serious illness cover into one plan for your convenience and peace of mind. It complements existing protection you may have in place and looks to cover where you may be under insured.</p>
-                                <h4>What does it give me?</h4>
-                                <div class="two-column">
-                                <ul class="list-item clearfix">
-                                    <li>One Plan provides dynamic life cover that meets your changing family needs.</li>
-                                    <li>It the event that you are unable to work it will provide funds for essential bills such as mortgage and utilities..</li>
-                                    <li>Serious illness cover to help you get back on your feet or make any necessary changes to your home.</li>
-                                    <li>Flexibility and control to design a protection plan that suits your family and affordability</li>
-                                    
-                                </ul> </div>
+                                <h2 id="title2"></h2>
+                                <p id="bodyText"></p>
                                
-                                <h4>How do I know it is right for me?</h4>
-
-<p>Easy, contact us today for a quick chat. We will review your existing protection and prepare a report for your consideration. The review focuses on protecting your income in the event of death or illness to you and your family. We will look at income coming into the house, what existing plans you have and what state benefits might help in these circumstances.</p>
-                                <p>If there is a gap between what you need and what you already have, then my role as your financial advisor is to offer advice on how to solve the problem.</p>
-
-                           
                             </div>
                           
                  
@@ -242,10 +224,12 @@
                         <div class="service-sidebar">
                             <div class="category-widget">
                                 <ul class="category-list clearfix">
-                                    <li><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
-                                    <li><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
-                                    <li><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
-
+                                    <li id="li1"><a id="link1" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink1"></a></li>
+                                        <li id="li2"><a id="link2" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink2"></a></li>
+                                        <li id="li3"><a id="link3" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink3"></a></li>
+                                        <li id="li4"><a id="link4" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink4"></a></li>
+                                        <li id="li5"><a id="link5" href="_blank"><i class="fas fa-angle-right"></i><span id="lLink5"></a></li>
+    
                                 </ul>
                             </div>
                             <div class="support-box">
@@ -335,9 +319,66 @@
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/scrollbar.js"></script>
     <script src="assets/js/isotope.js"></script>
-
+    <script src="assets/js/showdown.min.js"></script>
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $("#li1").hide();
+            $("#li2").hide();
+            $("#li3").hide();
+            $("#li4").hide();
+            $("#li5").hide();
 
+            $.getJSON("json/one-plan-family-first.json", function(json) {
+                $("#title0").append(json.title);
+                $("#title1").append(json.title);
+                $("#title2").append(json.title);
+                var converter = new showdown.Converter();
+                var html = converter.makeHtml(json.body);
+                html = html.replaceAll("<ul>","<ul style='list-style:circle !important; margin-left:10px;'>");
+                html = html.replaceAll("<li>","<li style='list-style:circle !important; margin-left:10px;'>");
+                $("#bodyText").append(html);
+                if(json.link1 != '' && json.lLink1 != '' && json.link1 != undefined && json.lLink1 != undefined) 
+                {
+                    $("#link1").attr('href',json.link1); 
+                    $("#lLink1").append(json.lLink1);  
+                    $("#li1").show();
+                    
+                }
+                if(json.link2 != '' && json.lLink2 != '' && json.link2 != undefined && json.lLink2 != undefined)
+                {
+                    $("#link2").attr('href',json.link2); 
+                    $("#lLink2").append(json.lLink2);  
+                    $("#li2").show();
+                   
+                }
+                if(json.link3 != '' && json.lLink3 != '' && json.link2 != undefined && json.lLink3 != undefined)
+                {
+                    $("#link3").attr('href',json.link3); 
+                    $("#lLink3").append(json.lLink3);  
+                    $("#li3").show();
+                   
+                }
+                
+                if(json.link4 != '' && json.lLink4 != '' && json.link3 != undefined && json.lLink4 != undefined)
+                {
+                    $("#link4").attr('href',json.link4); 
+                    $("#lLink4").append(json.lLink4);  
+                    $("#li4").show();
+                    
+                }
+                if(json.link5 != '' && json.lLink5 != '' && json.link4 != undefined && json.lLink5 != undefined)
+                {
+                    $("#link5").attr('href',json.link5); 
+                    $("#lLink5").append(json.lLink5);  
+                    $("#li5").show();
+                    
+                }
+            });
+
+
+        });
+</script>
 </body><!-- End of .page_wrapper -->
 </html>
