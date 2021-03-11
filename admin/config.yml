@@ -167,5 +167,22 @@ collections:
           - { label: URL Link 4, name: link4, widget: string, required: false}
           - { label: Label Link 5, name: lLink5, widget: string, required: false}
           - { label: URL Link 5, name: link5, widget: string, required: false}
+      - label: "Income Protection"
+        name: "life_protection "
+        file: "/json/income-protection.json"
+        allow_add: true
+        fields:
+          - { label: Title, name: title, widget: string}
+          - { label: Body, name: body, widget: markdown}
+          - { label: Label Link 1, name: lLink1, widget: string, required: false}
+          - { label: URL Link 1, name: link1, widget: string, required: false}
+          - { label: Label Link 2, name: lLink2, widget: string, required: false}
+          - { label: URL Link 2, name: link2, widget: string, required: false}
+          - { label: Label Link 3, name: lLink3, widget: string, required: false}
+          - { label: URL Link 3, name: link3, widget: string, required: false}
+          - { label: Label Link 4, name: lLink4, widget: string, required: false}
+          - { label: URL Link 4, name: link4, widget: string, required: false}
+          - { label: Label Link 5, name: lLink5, widget: string, required: false}
+          - { label: URL Link 5, name: link5, widget: string, required: false}
       
 	  
