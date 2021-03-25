@@ -82,7 +82,7 @@ collections:
           - { label: URL Link 4, name: link4, widget: string, required: false}
           - { label: Label Link 5, name: lLink5, widget: string, required: false}
           - { label: URL Link 5, name: link5, widget: string, required: false}
-      - label: "One Plan"
+      - label: "Protection"
         name: "one-plan"
         file: "/json/one-plan-family-first.json"
         allow_add: true
