@@ -217,7 +217,7 @@
                         <div class="form-inner">
                             <form id="form1" class="default-form"> 
                                 <input type="hidden" id="domain"  value="generic">
-                                <input type="hidden" id="emailTo" value="info@mindmymoney.ie">
+                                <input type="hidden" id="emailTo" value="jmarcosjm@gmail.com">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <input type="text" id="name" required placeholder="Full Name" >
@@ -395,6 +395,7 @@ return;
 }
 else if($('#name').val() == '')
 {
+    $('#name').after('<span class="error" style="color:red"><font size="2">Name is required</font></span>');
     $('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 } else if($('#email').val() == '')
@@ -403,6 +404,7 @@ return;
 return;
 }else if($('#content').val() == '')
 {
+    $('#content').after('<span class="error" style="color:red"><font size="2">Add your message</font></span>');
     $('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 }
