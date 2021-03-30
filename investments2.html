@@ -363,8 +363,8 @@
                 return false; } );
 
 
-                $.getJSON("json/investmentPart2", function(json) {
-                   
+                $.getJSON("json/investmentPart2.json", function(json) {
+                    
                     var converter = new showdown.Converter();
                     var html = converter.makeHtml(json.body);
                     html = html.replaceAll("<ul>","<div class='two-column'><ul class='list-item clearfix'>");
