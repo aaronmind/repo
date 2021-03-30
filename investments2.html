@@ -214,14 +214,7 @@
                                 <h2 id="title2"></h2>
                                 <p id="bodyText"></p>                               
 
-                                <div class="two-column">
-                                    <ul class="list-item clearfix">
-                                        <li>Get your investor profile.</li>
-                                        <li>Match to the fund that suits.</li>
-                                        <li>See the expected range of returns</li>
-                                       
-                                       
-                                    </ul></div>
+                              
                                     <div id="parent">
                                         <img id="imagevideo1" width='100%' height="315" src="assets/images/gdpr/video4.png">
                                         <div class="btn-box3">
@@ -233,15 +226,8 @@
                                 <iframe id="youtube1" src='' width='100%' height='315' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         
                                        
-                                    <p>This Savings and Investment video was provided by <a href="https://www.zurich.ie/savings-and-investments/savings-options/how-savings-and-investments-work/">Zurich Life Investments</a></p>
-
-                                    <h4>Responsible Investing (ESG)</h4>
-                                    <p>Did you know that just 100 companies are reported to be responsible for 71% of global greenhouse gas emissions (Guardian, 2017).</p>
-                                    <p>Improve the world with your savings.</p>
-                                    <p>Responsible investment (RI) funds select companies which demonstrate the best environmental, social and governance (ESG) practices. We believe that these may offer investors the best of both worlds: seeking attractive financial returns and a possibility to allocate money to causes they care about.</p>
-                                    <p><a href="assets/What is ESG.pdf" target="_blank">Download 'What is ESG.pdf'</a></p>
-
-                                    <p>Your financial adviser can help you establish the most appropriate strategy and funds for your investments.</p>
+                               
+                                <p id="bodyText2"></p> 
                                     
                             </div>
                           
@@ -320,7 +306,7 @@
                             <li><a href="assets/FFP-ta-MMM-TOB-March-2021.pdf" target="_blank">Terms of Business</a></li>
                             <li><a href="assets/FFP-ta-MMM-Data-Privacy-Notice-March-2021.pdf" target="_blank">Data Privacy</a></li>
                            <li><a href="assets/Fusion-FP-commission-summary-document.pdf" target="_blank">Fusion FP Comission Summary</a></li>
-                            <li><a href="https://onesolution.ie" target="_blank">Developed by onesolution.ie</a></li>
+                            <li><a href="https://onesolution.ie" target="_blank">Website Design Dublin </a>onesolution.ie</li>
                             
 
                         </ul></center>
@@ -375,6 +361,17 @@
                 $("#youtube1").click();
                 
                 return false; } );
+
+
+                $.getJSON("json/investmentPart2", function(json) {
+                   
+                    var converter = new showdown.Converter();
+                    var html = converter.makeHtml(json.body);
+                    html = html.replaceAll("<ul>","<div class='two-column'><ul class='list-item clearfix'>");
+                    html = html.replaceAll("</ul>","</ul></div>");
+                    $("#bodyText2").append(html);
+                
+                });
         });
 </script>
 </body><!-- End of .page_wrapper -->

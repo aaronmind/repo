@@ -65,6 +65,12 @@ collections:
           - { label: URL Link 4, name: link4, widget: string, required: false}
           - { label: Label Link 5, name: lLink5, widget: string, required: false}
           - { label: URL Link 5, name: link5, widget: string, required: false}
+      - label: "Investments Part 2"
+        name: "investments_part2"
+        file: "/json/investmentPart2.json"
+        allow_add: true
+        fields: 
+          - { label: Body, name: body, widget: markdown}
       - label: "Mortgage Protection"
         name: "mortgage-protection"
         file: "/json/mortgage-protection.json"
