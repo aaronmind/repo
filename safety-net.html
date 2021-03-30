@@ -97,7 +97,7 @@
                                                         <li><h4>Family Future</h4></li>
                                                         <li><a href="savings-planning-future-retirement.html">Saving Plans</a></li>
                                                         <li><a href="safety-net.html">Safety Net</a></li>
-                                                        <li><a href="investments.html">Investments</a></li>
+                                                        <li><a href="investments2.html">Investments</a></li>
                                                         <li><a href="savings-for-home.html">Saving for a Home</a></li>
                                                         <li><a href="risk-for-you.html">How much risk is right for you?</a></li>
                                                     </ul>
@@ -213,6 +213,16 @@
                             <div class="text">
                                 <h2 id="title2"></h2>
                                 <p id="bodyText"></p> 
+                                <div id="parent2">
+                                    <img id="imagevideo2" width='100%' height="315" src="assets/images/gdpr/calc1.png">
+                                    <div class="btn-box4">
+                                        <a href="" id="acceptCookiesZurich" class="theme-btn-one">
+                                            This calculator is hosted by a third party. By clicking you accept the terms and conditions of www.zurich.ie.
+                                        </a>
+                                    </div>
+                                </div>
+                                <iframe id="zurich1" src="" height="800px" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" allowfullscreen="allowfullscreen"></iframe><p>Budgeting for savings made easier with this <a target="_blank" href="https://www.zurich.ie/savings-and-investments/savings-and-investment-calculators/budget-calculator">budget calculator provided by Zurich Life </a></p>
+                     
                             </div>
                           
                  
@@ -325,6 +335,36 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/showdown.min.js"></script>
     <script src="assets/js/netlify.js" id="netlify" jsonFile="safety-net.json"></script>
+    <script>
+        $( document ).ready(function() {
 
+
+
+
+            $("#zurich1").hide();
+            $("#parent2").hide();
+            if(sessionStorage.getItem("acceptedCookiesZurich") == "yes")
+            {
+                $("#zurich1").attr("src","https://www.zurich.ie/savings-and-investments/savings-and-investment-calculators/budget-calculator?popup=true");
+                $("#zurich1").attr("height","800px");
+                $("#zurich1").attr("width","100%");
+                $("#zurich1").show();
+            }else{
+                $("#parent2").show();
+                
+            }
+            $('#acceptedCookiesZurich').click( function(e) {e.preventDefault();
+                sessionStorage.setItem("acceptedCookiesZurich","yes");
+                $("#zurich1").attr("src","https://www.zurich.ie/savings-and-investments/savings-and-investment-calculators/budget-calculator?popup=true");
+                $("#zurich1").attr("height","800px");
+                $("#zurich1").attr("width","100%");
+                
+                $("#zurich1").show();
+                $("#parent2").hide();
+               
+                
+                return false; } );
+        });
+</script>
 </body><!-- End of .page_wrapper -->
 </html>
